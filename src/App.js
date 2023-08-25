@@ -9,7 +9,7 @@ import {
 import { useEffect, useState } from "react";
 
 function App() {
-  const [password, setPassword] = useState("");
+  const [password, setPassword] = useState("fdsafsafdsa");
   const [sliderNum, setSliderNum] = useState(20);
   const [upPass, setUpPass] = useState(false);
   const [lowPass, setLowPass] = useState(false);
@@ -58,8 +58,6 @@ function App() {
   
   */
 
-
-
   // gets value from slider and displays it as an INT
   const sliderValue = () => {
     const slider = document.getElementById("password-length").value;
@@ -91,7 +89,14 @@ function App() {
     <div className="main-container">
       <p>Password Generator</p>
       <div className="password-display">
-        <h2>{password}</h2>
+        <input
+          autoComplete="off"
+          id="password"
+          type="text"
+          minLength={8}
+          maxLength={20}
+          value={password}
+        />
         <FontAwesomeIcon id="copy-icon" size="lg" icon={faCopy} />
       </div>
       <div className="main-display">
