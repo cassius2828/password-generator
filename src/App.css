@@ -1,10 +1,30 @@
+@import url("https://fonts.googleapis.com/css?family=Inconsolata");
+
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Inconsolata";
+scroll-behavior: smooth;
 }
+
+:root {
+  --primary-color: rgb(160, 241, 160);
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+span {
+  color: whitesmoke;
+}
+
+/* app styles */
 
 .main-container {
   display: flex;
@@ -15,13 +35,20 @@
   width: 100vw;
 }
 
+.main-container > p {
+  font-size: 1.25rem;
+  color: rgb(184, 184, 184);
+}
+
 /* part 1 */
 
 .password-display,
 .main-display {
   display: flex;
-  width: 100%;
-  border: solid 2px orange;
+  width: 90%;
+  padding: 1rem;
+  margin-top: 1rem;
+  background-color: rgb(40, 40, 40);
 }
 
 .password-display {
@@ -39,13 +66,117 @@
   justify-content: space-between;
 }
 
+#char-length {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+.char-length-num {
+  color: var(--primary-color);
+}
+
+#copy-icon {
+  color: var(--primary-color);
+}
+
+/* input styles */
+
 .input-container {
-  /* border: solid 2px red; */
+  margin: 1rem 0;
 }
 
 input {
   width: 80%;
   margin: auto;
+}
+
+input[type="range"] {
+  height: 29px;
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+  background-color: transparent;
+}
+input[type="range"]:focus {
+  outline: none;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  animate: 0.2s;
+
+  background: #3071a9;
+  border-radius: 5px;
+  border: 5px solid var(--primary-color);
+}
+input[type="range"]::-webkit-slider-thumb {
+  box-shadow: 0px 0px 2px whitesmoke;
+  border: 1px solid whitesmoke;
+  height: 22px;
+  width: 22px;
+  border-radius: 50px;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -11px;
+}
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: #3071a9;
+}
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  animate: 0.2s;
+
+  background: #3071a9;
+  border-radius: 5px;
+  border: 5px solid var(--primary-color);
+}
+input[type="range"]::-moz-range-thumb {
+  box-shadow: 0px 0px 2px whitesmoke;
+  border: 1px solid whitesmoke;
+  height: 22px;
+  width: 22px;
+  border-radius: 50px;
+  background: #ffffff;
+  cursor: pointer;
+}
+input[type="range"]::-ms-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type="range"]::-ms-fill-lower {
+  background: #3071a9;
+  border: 5px solid var(--primary-color);
+  border-radius: 10px;
+}
+input[type="range"]::-ms-fill-upper {
+  background: #3071a9;
+  border: 5px solid var(--primary-color);
+  border-radius: 10px;
+}
+input[type="range"]::-ms-thumb {
+  margin-top: 1px;
+  box-shadow: 0px 0px 2px whitesmoke;
+  border: 1px solid whitesmoke;
+  height: 22px;
+  width: 22px;
+  border-radius: 50px;
+  background: #ffffff;
+  cursor: pointer;
+}
+input[type="range"]:focus::-ms-fill-lower {
+  background: #3071a9;
+}
+input[type="range"]:focus::-ms-fill-upper {
+  background: #3071a9;
 }
 
 /* part 3 */
@@ -54,22 +185,43 @@ input {
   display: flex;
   flex-direction: column;
 }
-
+/* icons */
 .icon-container {
-  width: 1rem;
-  height: 1rem;
-  border: solid 1px whitesmoke;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
-.icon {
-  color: lime;
+.passed, .failed {
   width: 100%;
   height: 100%;
+}
+
+.passed {
+   color: var(--primary-color);
+}
+
+.failed {
+  color: red
+}
+
+/* descriptions */
+
+.include {
+  margin: 0.5rem 0;
+  /* border: solid 2px orange; */
+}
+
+.include span {
+  word-spacing: 10px;
+  font-size: 1.35rem;
+  text-transform: capitalize;
 }
 
 .row {
   display: flex;
   justify-content: start;
+  align-items: center;
+  /* border: solid 2px red; */
 }
 
 .include {
@@ -81,11 +233,25 @@ input {
 .strength-container {
   width: 100%;
   height: 2rem;
+  /* padding: 1rem; */
   display: flex;
+  /* flex-wrap: nowrap; */
   align-items: center;
   justify-content: space-between;
-  background-color: black;
-  color: whitesmoke
+  background-color: rgb(23, 23, 23);
+  color: whitesmoke;
+}
+
+.strength,
+.bar-container {
+  margin: 0 1rem;
+  color: rgb(184, 184, 184);
+}
+
+.strength,
+.medium-contianer,
+.generate {
+  text-transform: uppercase;
 }
 
 .medium-contianer {
@@ -102,20 +268,28 @@ input {
 }
 
 .bars {
-  height: 80%;
-  width: .5rem;
+  height: 65%;
+  width: 0.5rem;
+  /* background-color: rgb(88, 88, 164); */
+
+  margin: auto 0.125rem;
+}
+/* add classes by selecting the DOM to pass requirements */
+
+.filled {
   background-color: yellow;
-  margin: auto .125rem;
+}
+
+.empty {
+  border: solid 1px whitesmoke;
 }
 
 .bars:last-child {
-  margin-right: .5rem;
-
+  margin-right: 0.5rem;
 }
 
 .bars:first-child {
   margin-left: 1rem;
-
 }
 
 /* part 5 */
@@ -126,6 +300,8 @@ input {
   align-items: center;
   padding: 1rem;
   font-size: 1.25rem;
+  margin-top: 1rem;
+  background-color: var(--primary-color);
 }
 
 #arrow {
