@@ -12,6 +12,7 @@
 
 :root {
   --primary-color: rgb(160, 241, 160);
+  --primaryDim-color: rgb(140, 189, 140);
 }
 
 h1,
@@ -24,6 +25,13 @@ span {
   color: whitesmoke;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
+.dim {
+  opacity: 0.3;
+}
 /* app styles */
 
 .main-container {
@@ -40,7 +48,9 @@ span {
   color: rgb(184, 184, 184);
 }
 
+/* //////////////// */
 /* part 1 */
+/* //////////////// */
 
 #password {
   background-color: transparent;
@@ -61,7 +71,9 @@ span {
   justify-content: space-between;
 }
 
+/* //////////////// */
 /* part 2 */
+/* //////////////// */
 
 .main-display {
   flex-direction: column;
@@ -79,6 +91,24 @@ span {
 
 .char-length-num {
   color: var(--primary-color);
+}
+#click-event-div {
+  position: relative;
+}
+
+.hidden-text,
+.visible {
+  position: absolute;
+  top: -2.5rem;
+  right: -0.75rem;
+}
+
+.hidden-text {
+  display: none;
+}
+
+.visible {
+  opacity: 1;
 }
 
 #copy-icon {
@@ -185,8 +215,9 @@ input[type="range"]:focus::-ms-fill-upper {
   background: #3071a9;
 }
 
+/* //////////////// */
 /* part 3 */
-
+/* //////////////// */
 .bottom-display {
   display: flex;
   flex-direction: column;
@@ -235,7 +266,9 @@ input[type="range"]:focus::-ms-fill-upper {
   margin-left: 2rem;
 }
 
+/* //////////////// */
 /* part 4 */
+/* //////////////// */
 
 .strength-container {
   width: 100%;
@@ -299,7 +332,9 @@ input[type="range"]:focus::-ms-fill-upper {
   margin-left: 1rem;
 }
 
+/* //////////////// */
 /* part 5 */
+/* //////////////// */
 
 .generate {
   display: flex;
@@ -309,8 +344,48 @@ input[type="range"]:focus::-ms-fill-upper {
   font-size: 1.25rem;
   margin-top: 1rem;
   background-color: var(--primary-color);
+  transition: all 0.2s ease-out;
 }
 
 #arrow {
   margin: 0 1rem;
+}
+
+/* ////////////////// */
+/* ! MEDIA QUERIES XS DEVICES */
+/* ////////////////// */
+
+@media (max-width: 380px) {
+  .include span {
+    word-spacing: 6px;
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 330px) {
+  .include span {
+    word-spacing: 4px;
+    font-size: 0.9rem;
+  }
+}
+
+/* ////////////////// */
+/* ! MEDIA QUERIES TABLET DEVICES */
+/* ////////////////// */
+
+@media (min-width: 550px) {
+  .main-container {
+    width: 80vw;
+    margin: 2rem auto;
+  }
+}
+
+/* ////////////////// */
+/* ! MEDIA QUERIES DESKTOP DEVICES */
+/* ////////////////// */
+
+@media (min-width: 769px) {
+  .main-container {
+    width: 50vw;
+    margin: 2rem auto;
+  }
 }
