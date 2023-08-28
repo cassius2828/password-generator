@@ -252,11 +252,9 @@ function App() {
     changeIcon("length", lengthPass);
   }, [upPass, lowPass, numPass, symPass, lengthPass]);
 
-
-useEffect(() => {
-  test()
-},[password])
-
+  // useEffect(() => {
+  //   test()
+  // },[password])
 
   /////////////////////////////////
   // ! START RETURN
@@ -416,6 +414,10 @@ useEffect(() => {
           Generate <FontAwesomeIcon id="arrow" icon={faArrowRight} />{" "}
         </button>
       </div>
+      <footer>
+        Developed By{" "}
+        <a href="https://github.com/cassius2828">Cassius Reynolds</a>
+      </footer>
     </div>
   );
 }
