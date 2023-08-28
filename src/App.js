@@ -453,4 +453,7 @@ https://www.freecodecamp.org/learn/data-visualization/data-visualization-with-d3
 add to scores app with D3
 make viusalization bar and highlight your score amongst the rest!!
 
+GABEI code pen to implement color code for random passwrod
+https://codepen.io/gabei/pen/poqgxoj
+
 */
