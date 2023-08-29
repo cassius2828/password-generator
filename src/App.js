@@ -386,7 +386,7 @@ function App() {
           <span className="strength">strength</span>{" "}
           <div className="medium-contianer">
             {" "}
-            <h3>
+            <span>
               {barProgress < 2
                 ? "Weak"
                 : barProgress < 4
@@ -396,7 +396,7 @@ function App() {
                 : barProgress === 5
                 ? "Very Strong"
                 : null}
-            </h3>
+            </span>
           </div>
           <div className="bar-container">
             <div id="bar1" className="bars empty"></div>

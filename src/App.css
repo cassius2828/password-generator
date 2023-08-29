@@ -247,8 +247,13 @@ input[type="range"]:focus::-ms-fill-upper {
 
 .include span {
   word-spacing: 10px;
-  font-size: 1.35rem;
+  font-size: 1.2rem;
+  /* font-weight: 500; */
   text-transform: capitalize;
+}
+
+.medium-contianer span {
+  font-size: 1.2rem;
 }
 
 .row {
@@ -268,9 +273,7 @@ input[type="range"]:focus::-ms-fill-upper {
 .strength-container {
   width: 100%;
   height: 2rem;
-
   display: flex;
-
   align-items: center;
   justify-content: space-between;
   background-color: rgb(23, 23, 23);
@@ -293,6 +296,8 @@ input[type="range"]:focus::-ms-fill-upper {
   display: flex;
   align-items: center;
   margin-left: auto;
+  font-weight: 500;
+  font-size: 0.9rem;
 }
 
 .bar-container {
@@ -393,22 +398,22 @@ footer a:hover::before {
     font-size: 1.1rem;
   }
 
-  .medium-contianer {
-    font-size: 0.9rem;
+  .medium-contianer span {
+    font-size: 14.4px;
   }
 }
 @media (max-width: 370px) {
   .medium-contianer,
   .strength,
   .bar-container {
-    margin: 0 0.35rem;
-    font-size: 0.85rem;
+    margin: 0 5.6px;
+    font-size: 13.6px;
   }
 }
 @media (max-width: 330px) {
   .include span {
     word-spacing: 4px;
-    font-size: 0.9rem;
+    font-size: 14.4px;
   }
 }
 
@@ -416,13 +421,13 @@ footer a:hover::before {
   .medium-contianer,
   .strength,
   .bar-container {
-    margin: 0 0.35rem;
-    font-size: 0.75rem;
+    margin: 0 5.6px;
+    font-size: 12px;
   }
 
   .include span {
     word-spacing: 4px;
-    font-size: 0.8rem;
+    font-size: 12.8px;
   }
 }
 
@@ -430,13 +435,13 @@ footer a:hover::before {
   .medium-contianer,
   .strength,
   .bar-container {
-    margin: 0 0.1rem;
-    font-size: 0.7rem;
+    margin: 0 1.6px;
+    font-size: 11.2px;
   }
 
   .include span {
     word-spacing: 4px;
-    font-size: 0.8rem;
+    font-size: 12.8px;
   }
 }
 
@@ -447,7 +452,7 @@ footer a:hover::before {
 @media (min-width: 550px) {
   .main-container {
     width: 80vw;
-    margin: 2rem auto;
+    margin: 32px auto;
   }
 }
 
@@ -474,10 +479,10 @@ footer a:hover::before {
   }
 }
 
-@media (min-width: 1700px) {
+@media (min-width: 2000px) {
   .main-container {
     width: 25vw;
-    margin: 50rem auto;
+    margin: 25rem auto;
     transform: scale(2);
   }
 }
